@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME BUILDER | RVCE</title>
+    <style>
+        *{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            body {
+            animation: reveal linear both;
+             animation-timeline: view(block);
+             animation-range: cover 0% cover 40%;
+            }
+
+        body::-webkit-scrollbar{
+            width: 0;
+        }
+        input{
+            border: none;
+            background-color: rgb(226, 226, 226);
+            border-radius: 8px;
+            padding-left: 10px;
+        }
+        textarea{
+            border: none;
+            background-color: rgb(226, 226, 226);
+            border-radius: 10px;
+            padding-left: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="text-center" style="background-color: rgb(255, 255, 255); position: relative; ">
+    <div class="main-page " style="z-index: 1;">
+
+
+
+        
+
+
+
+        <div class="container bg-white my-5 py-5" style="border-radius: 20px;box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);">
+
+
+
+            <nav class="navbar navbar-light bg-transparent   justify-content-between px-5">
+                <a class="navbar-brand">            <img src="rvce_logo.png" alt="RVCE Logo" style=" filter: opacity(1); " class="img-fluid text-center " width="100px">
+                </a>
+                <span class="text-dark" style="font-size: 42px;">RESUME <br>BUILDER</span>
+                    <h2 class="text-end py-3 text-secondary">RVCE  </h2>
+                    
+              </nav>
+    
+
+
+
+            <section class="container"> 
+                
+
+                <section class=" p-5 text-start " style="border-radius: 25px; background-color: rgb(245, 245, 245);">
+
+
+                    <!-- <h4 class="text-center m-2" id="sapID"></h4> -->
+                <br>
+
+                    <form id="biodataForm"  class="text-start" >
+
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="name">Name</label><span style="color: red;"> *</span>
+                                <input type="text" id="fname" name="name" required placeholder="Enter Fullname"><br>
+
+                        
+                        <label for="phone">Phone</label><span style="color: red;"> *</span>
+
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter phone number"><br>
+
+                       
+
+                        <label for="github">GitHub</label><span style="color: red;"> *</span>
+
+                        <input type="text" id="github" name="github"  required placeholder="Enter username">
+                        <input type="text" id="githublink" placeholder="Enter GitHub link"  class="my-1">
+
+                            </div>
+
+
+
+
+                            <div class="col">
+
+                                <label>Email</label><span style="color: red;"> *</span>
+                                <input type="email" id="email" name="email" required placeholder="Enter Email address"><br>
+        
+
+                                <label for="linkedin">LinkedIn</label><span style="color: red;"> *</span>
+                                <input type="text" id="linkedin" name="linkedin" required placeholder="Enter username">
+                                <input type="text" id="LinkedInlink" placeholder="Enter LinkedIn link" class="my-1">
+                                <br>
+
+                                
+                                <label for="PersonalPage">Personal Page</label>
+                                
+                                <input type="text" id="personalPage" placeholder="Enter Portfolio link"  class="my-1">
+
+                            </div>
+                          </div>
+
+                                <div class="resume-photo mt-4" id="photo-container" style="padding: 5px;">
+                                    <h5>Choose Photo<span style="color: red;"> *</span> </h5>   
+                                <input type="file" id="photo-input" accept="image/*" style="height: 45px; padding: 6px;" >
+                                </div>
+                                    <br>
+
+                          <div style="width: 100%;">
+                        
+                            <label for="Objective">Objective</label><span style="color: red;"> *</span>
+                            <textarea id="objective" name="Objective" rows="2" style="width: 100%; padding: 5px 20px 0 20px;" required></textarea><br>
+                        </div><br>
+                        <div style="width: 100%;">
+                        
+                            <label for="skill">Skills</label><span style="color: red;"> *</span>
+
+
+                            <div class="container p-4" style="background-color: rgb(226, 226, 226); border-radius: 15px;">
+                                <label>Programing Languages </label><span style="color: red;"> *</span>
+                                <input type="text" id="skillsPro" required style="background-color: rgba(255, 255, 255,0.45); width: 50%;" placeholder="Enter known Programming languages, eg. C++,Python, Java"><br>
+                                <label>Technologies</label><span style="color: red;"> *</span>
+                                <input type="text" id="skillsTech" required style="background-color: rgba(255, 255, 255,0.45); width: 40%;" placeholder="Enter known Technology, eg. HTML,CSS...."><br>
+                                <label>Soft Skills</label><span style="color: red;"> *</span>
+                                <input type="text" id="skillsSoft" required style="background-color: rgba(255, 255, 255,0.45); width: 40%; "placeholder="Enter your softskills"><br>
+                                <label>Version control system</label><span style="color: red;"> *</span>
+                                <input type="text" id="vcs" required style="background-color: rgba(255, 255, 255,0.45);  width: 40%;"placeholder="eg. Git, GitHub "><br>
+                            </div>
+                        </div><br>
+                        <div style="width: 100%;">
+
+                            <div class="container p-4" style="background-color: rgb(226, 226, 226); border-radius: 15px;">
+
+                                <label for="project"><h4>Project - 1</h4></label><span style="color: red;"> *</span><br>
+
+                                <label>Project Title</label><span style="color: red;"> *</span>
+                                <input type="text" id="ProName1" required style="background-color: rgba(255, 255, 255,0.45); width: 40%;" placeholder="Enter the project name"><br><br>
+
+                                <label>Duration</label><span style="color: red;"> *</span><br>
+                                <span>From:</span><input type="date" id="FromDatePro1" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                <span>To:</span><input type="date" id="toDatepro1" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br><br>
+
+                                <label>Technology used</label><span style="color: red;"> *</span>
+                                <input type="text" id="TechStack1" required style="background-color: rgba(255, 255, 255,0.45); width: 40%;" placeholder="Mention the Technologies used"><br><br>
+                                
+                                <label>Project description</label><span style="color: red;"> *</span>
+                                <textarea id="ProDescri1" name="Certificate" rows="2" style="width: 100%;background-color: rgba(255, 255, 255,0.45)" required placeholder="Enter Project Description"> </textarea><br>
+                                
+                                <br><br>
+                            
+                                <!-- projects -->
+                                <label for="project"><h4>Projects - 2</h4></label><br>
+
+                                <label>Project Title</label>
+                                <input type="text" id="ProName2" required style="background-color: rgba(255, 255, 255,0.45); width: 40%;" placeholder="Enter the project name"><br><br>
+
+                                <label>Duration</label><br>
+                                <span>From:</span><input type="date" id="FromDatepro2" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                <span>To:</span><input type="date" id="toDatepro2" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br><br>
+
+                                <label>Technology used</label>
+                                <input type="text" id="TechStack2" required style="background-color: rgba(255, 255, 255,0.45); width: 40%;" placeholder="Mention the Technologies used"><br><br>
+                        
+                                <label>Project description</label>
+                                <textarea id="ProDescri2" name="Certificate" rows="2" style="width: 100%;background-color: rgba(255, 255, 255,0.45)" required> </textarea><br>
+                            
+
+                            </div>
+                        
+                            
+                        </div><br>
+                        <div  style="background-color: rgb(226, 226, 226); border-radius: 15px; padding: 20px;width: 100%; padding: 20px;">
+                        
+                            <label for="wExpi"><h4>Work Experience:</h4></label><span style="color: red;"> *</span>
+                            <br>
+                            <h5>Experience - 1</h5>
+                            <br>
+                            <div class="row"  >
+                                <div class="col-6">
+                                    <label>Profile Worked</label><span style="color: red;"> *</span>
+                                    <input type="text" id="profile1frCompy" required style="background-color: rgba(255, 255, 255,0.45); width: 60%;" placeholder="Enter the Profile name"><br>
+                                    
+                                    <label>Company Worked</label><span style="color: red;"> *</span>
+                                    <input type="text" id="CopnyName1" required style="background-color: rgba(255, 255, 255,0.45); width: 60%;" placeholder="Enter the Company name"><br>
+                            
+                                    <label>Duration</label><span style="color: red;"> *</span><br>
+                                    <span>From:</span><input type="date" id="FromDatework1" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                    <span>To:</span><input type="date" id="toDatework1" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+    
+                                  
+                                </div>
+                                <div class="col-6">
+                                    <label>Work description</label><span style="color: red;"> *</span>
+                                    <textarea id="Work1Des" name="Certificate" rows="2" style="width: 100%;background-color: rgba(255, 255, 255,0.45); height: 70%;" required> </textarea><br>
+                                
+                                </div>
+                                    
+                               
+                                
+                            </div>
+
+                            <br>
+                            <h5>Experience - 2</h5>
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Profile Worked</label>
+                                    <input type="text" id="profile1frCompy2" required style="background-color: rgba(255, 255, 255,0.45); width: 60%;" placeholder="Enter the Profile name"><br>
+                                    
+                                    <label>Company Worked</label>
+                                    <input type="text" id="CopnyName2" required style="background-color: rgba(255, 255, 255,0.45); width: 60%;" placeholder="Enter the Company name"><br>
+                            
+                                    <label>Duration</label><br>
+                                    <span>From:</span><input type="date" id="FromDatework2" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                    <span>To:</span><input type="date" id="toDatework2" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+    
+                                  
+                                </div>
+                                <div class="col-6">
+                                    <label>Work description</label>
+                                    <textarea id="Work2Des" name="Work2Des"  rows="2" style="width: 100%;background-color: rgba(255, 255, 255,0.45); height: 70%;" required> </textarea><br>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div  style="background-color: rgb(226, 226, 226); border-radius: 15px; padding: 20px;width: 100%; padding: 20px;">
+                            
+
+                            <label for="Education"><h4>Education</h4></label><span style="color: red;"> *</span><br>
+
+                            <div class="row">
+                                <div class="col-6">
+
+                                    <label for="project"><h4>PG-Program</h4></label><span style="color: red;"> *</span><br>
+
+                                    <label>Enter Program title (short form)</label><span style="color: red;"> *</span>
+                                    <input type="text" id="PGDurationStudies" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the title"><br>
+
+                                    <label>Enter the institution name</label><span style="color: red;"> *</span>
+                                    <input type="text" id="InstitutionsPresent" required style="background-color: rgba(255, 255, 255,0.45); width: 50%;" placeholder="Enter the institution name"><br><br>
+                                    
+                                    <label>Duration</label><span style="color: red;"> *</span><br>
+                                    <span>From:</span><input type="date" id="" max="YYYY-12-31" min="YYYY-01-01" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                    <span>To:</span><input type="date" id="" max="YYYY-12-31" min="YYYY-01-01" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br><br>
+
+                                    <label>CGPA</label><span style="color: red;"> *</span>
+                                    <input type="number" id="cgpaPgDeg" pattern="[0-9]" required style="background-color: rgba(255, 255, 255,0.45); width: 50%;" placeholder="CGPA / 10"><br><br>
+                                   
+                                   
+                                </div>
+                                <div class="col-6">
+
+                                        <label for="project"><h4>UG-Program </h4></label><span style="color: red;"> *</span><br>
+    
+                                        <label>Enter Program title (short form)</label><span style="color: red;"> *</span>
+                                        <input type="text" id="UGDegree" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the title"><br>
+    
+                                        <label>Enter the institution name</label><span style="color: red;"> *</span>
+                                        <input type="text" id="PastIntitution" required style="background-color: rgba(255, 255, 255,0.45); width: 50%;" placeholder="Enter the institution name"><br><br>
+                                        
+                                        <label>Duration</label><span style="color: red;"> *</span><br>
+                                        <span>From:</span><input type="date" id="UGDurationStudies" max="YYYY-12-31" min="YYYY-01-01" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                        <span>To:</span><input type="date" id="" max="YYYY-12-31" min="YYYY-01-01" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br><br>
+    
+                                        <label>CGPA</label><span style="color: red;"> *</span>
+                                        <input type="number" id="cgpaUGDeg" pattern="[0-9]" required style="background-color: rgba(255, 255, 255,0.45); width: 50%;" placeholder="CGPA / 10"><br><br>
+                                       
+                                       
+                                </div>
+                            </div>
+
+
+                           
+                        </div><br>
+                        
+                        <div style="background-color: rgb(226, 226, 226); border-radius: 15px; padding: 20px;width: 100%; padding: 20px;">
+                            
+                            <label for="Certificate"><h4>Certifications</h4></label><span style="color: red;"> *</span><br>
+                            <h5>Certificate - 1</h5>
+
+                                    <label>Certificate title</label><span style="color: red;"> *</span>
+                                    <input type="text" id="CeriName1" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the title"><br>
+
+                                    <label>Enter the Organization</label><span style="color: red;"> *</span>
+                                    <input type="text" id="organizationCertifi1" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the Organization name"><br>
+
+                                    <label>Date</label><span style="color: red;"> *</span>
+                                        <input type="date" id="Durationcerti1" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br><br>
+                                      
+
+
+
+                                        <h5>Certificate - 2</h5>
+
+                                        <label>Certificate title</label><span style="color: red;"> *</span>
+                                        <input type="text" id="CeriName2" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the title"><br>
+    
+                                        <label>Enter the Organization</label><span style="color: red;"> *</span>
+                                        <input type="text" id="organizationCertifi2" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the Organization name"><br>
+    
+                                        <label>Date</label><span style="color: red;"> *</span>
+                                            <input type="date" id="Durationcerti2" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br><br>
+                                      
+
+
+
+                                            <h5>Certificate - 3</h5>
+
+                                    <label>Certificate title</label><span style="color: red;"> *</span>
+                                    <input type="text" id="CeriName3" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the title"><br>
+
+                                    <label>Enter the Organization</label><span style="color: red;"> *</span>
+                                    <input type="text" id="organizationCertifi3" required style="background-color: rgba(255, 255, 255,0.45); width: 30%;" placeholder="Enter the Organization name"><br>
+
+                                    <label>Date</label><span style="color: red;"> *</span>
+                                        <input type="date" id="Durationcerti3" required style="background-color: rgba(255, 255, 255,0.45); width: fit-content; margin: 5px;"><br>
+                                      
+                        </div>
+                        <br>
+                        <div style="background-color: rgb(226, 226, 226); border-radius: 15px; padding: 20px;width: 100%; padding: 20px;">
+                        
+                            <label for="Achive"><h4>Achievments/Activity/Awards</h4></label><span style="color: red;"> *</span><br>
+
+                            <label>Achievments/Activity/Awards</label><span style="color: red;"> *</span>
+                                    <input type="text" id="achivements1" required style="background-color: rgba(255, 255, 255,0.45); width: 70%;" placeholder="Enter yor Activity"><br>
+                            <label>Achievments/Activity/Awards</label><span style="color: red;"> *</span>
+                                    <input type="text" id="achivements2" required style="background-color: rgba(255, 255, 255,0.45); width: 70%;" placeholder="Enter yor Activity"><br>
+                            <label>Achievments/Activity/Awards</label><span style="color: red;"> *</span>
+                                    <input type="text" id="achivements3" required style="background-color: rgba(255, 255, 255,0.45); width: 70%;" placeholder="Enter yor Activity"><br>
+                            <label>Achievments/Activity/Awards</label><span style="color: red;"> *</span>
+                                    <input type="text" id="achivements4" required style="background-color: rgba(255, 255, 255,0.45); width: 70%;" placeholder="Enter yor Activity"><br>
+                            <label>Achievments/Activity/Awards</label>
+                                    <input type="text" id="achivements5" required style="background-color: rgba(255, 255, 255,0.45); width: 70%;" placeholder="Enter yor Activity"><br>
+              
+                        </div>
+                        <br><br>
+                
+                        
+                          
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Resume Builder says!..</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  Resume can be printable, <br>
+                                    Make sure if any correction should be made
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-outline-secondary" id="createButton">Preview & Print</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            
+                        <button type="reset" class="btn btn-outline-secondary" >Reset</button>
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+                            Preview
+                          </button>
+                    </form>
+                </section>
+            </section>
+               
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- <img id="customCursor" src="cursor.png" alt="Custom Cursor" style="position: absolute; z-index: 9999; pointer-events: none; width: 50px;"> -->
+
+    <!-- <script>
+        document.addEventListener('mousemove', (e) => {
+            const customCursor = document.getElementById('customCursor');
+            customCursor.style.left = e.pageX + 'px';
+            customCursor.style.top = e.pageY + '2px';
+        });
+    </script> -->
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

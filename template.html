@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>${name} - Resume</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+        <style>
+            *{
+                font-family: 'Times New Roman', Times, serif;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+            a{
+                color: black;
+                text-decoration: none;
+    
+            }
+            hr{
+                margin: 0px 0 4px 0;
+            }
+        </style>
+    </head>
+    <body class="bg-white">
+        <div class="container p-4">
+            <section class="container text-center">
+    
+    
+    
+    
+    
+                <div class="row">
+                    <div class="col-9">
+                        <h1 style="font-size: 55px;">${name}</h1>
+    
+                        <nav class="">
+                            <div class="wider d-flex justify-content-between text-center px-5" style="width: 100%; font-size: 20px;">
+                                <a href="tel:${phone}" class="text-secondary " style="text-decoration: none;"><i class="fa-solid fa-phone"></i> - ${phone}</a> 
+                                <a href="${githublink}" class="text-secondary " style="text-decoration: none;"><i class="fa-brands fa-github"></i> - ${github}</a> 
+                            </div>
+                            
+                            <div class="wider d-flex justify-content-between text-center px-5" style="width: 100%;  font-size: 20px;">
+                                <a href="mailto:${email}" class="text-secondary " style="text-decoration: none;"><i class="fa-solid fa-envelope"></i> - ${email}</a> 
+                                <a href="${personalPage}" class="text-secondary " style="text-decoration: none;"><i class="fa-solid fa-globe"></i> - ${personalPage}</a> 
+                           </div>
+                            
+                            <br>
+            
+                        </nav>
+                    </div>
+                    <div class="col-3">
+                        <div class="resume-photo">
+                             <img src="${photoSrc}" alt="User Photo"  class="img-thumbnail" style="height: 150px; width: 120px ;">
+                         </div>
+                    </div>
+                  </div>
+    
+    
+    
+              
+            </section>
+    
+    
+            <div class="container">
+                <div class="objective">
+                     <h3><span style="font-size: 37px;">O</span>BJECTIVE</h3><hr>
+                     <p>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace; ${objective} Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ut aperiam velit fugit omnis non cumque voluptates laborum error, at placeat quisquam, nesciunt molestiae libero, deserunt vel mollitia numquam enim?</p>
+                </div>
+                <div class="Skills">
+                    <h3><span style="font-size: 37px;">S</span>KILLS</h3><hr>
+                    <h6>Programing Languages : ${skillsPro}</h6>
+                    <h6>Technologies : ${skillsTech}</h6>
+                    <h6>Soft Skills : ${skillsSoft}</h6>
+                    <h6>Version control system : ${vcs}</h6>
+                </div>
+                <div class="Projects">
+                    <h3><span style="font-size: 37px;">P</span>ROJECTS</h3><hr>
+                    <div class="container">
+                    <h4>- ${ProName1} <span style="font-size: 16px;" id="DatePro1"> </span></h4>
+                        <h6>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;- ${TechStack1}</h6>
+                        <div class="row">
+                            <div class="col-1">
+    
+                            </div>
+                            <div class="col-11">
+                            ${ProDescri1}       </div>
+                        </div>
+                    </div>
+                    <div class="container mt-2">
+                        <h4>- ${ProName2} <span style="font-size: 16px;" id="DatePro2"> </span></h4>
+                            <h6>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;- ${TechStack2}</h6>
+                            <div class="row">
+                                <div class="col-1">
+        
+                                </div>
+                                <div class="col-11">
+                                    ${ProDescri2}     </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="Work-Experience">
+                    <h3><span style="font-size: 37px;">W</span>ORK EXPERIENCE</h3><hr>
+                    <h3>${profile1frCompy} <small>| ${CopnyName1} | <span class="Datework1"></span></small></h3>
+                    <div class="row">
+                        <div class="col-1">
+    
+                        </div>
+                        <div class="col-11">
+                           ${Work1Des}   </div>
+                    </div>
+    
+                    <h3 class="mt-2">${profile1frCompy2} <small>| ${CopnyName2} | <span class="Datework2"></span></small></h3>
+                    <div class="row">
+                        <div class="col-1">
+    
+                        </div>
+                        <div class="col-11">
+                            ${Work2Des}  </div>
+                    </div>
+                </div>
+                </div>
+                <div class="Education">
+                    <h3><span style="font-size: 37px;">E</span>DUCATION</h3><hr>
+                    <div class="container d-flex justify-content-between">
+                        <h5>${PGDurationStudies} | ${Degree} at ${InstitutionsPresent}</h5> 
+                        <h5>CGPA ${cgpaPgDeg}/10</h5>
+                    </div>
+                    <div class="container d-flex justify-content-between">
+                        <h5>${UGDurationStudies} | ${UGDegree} at ${PastIntitution}</h5> 
+                        <h5>CGPA ${cgpaUGDeg}/10</h5>
+                    </div>
+                    
+                </div>
+                <div class="Certification">
+                    <h3><span style="font-size: 37px;">C</span>ERTIFICATION</h3><hr>
+                    <h5>- ${CeriName1} | ${organizationCertifi1} [${Durationcerti1}]</h5>
+                    <h5>- ${CeriName2} | ${organizationCertifi2} [${Durationcerti3}]</h5>
+                    <h5>- ${CeriName3} | ${organizationCertifi3} [${Durationcerti3}]</h5>
+    
+                </div>
+                <div class="AAA">
+                    <h3><span style="font-size: 37px;">A</span>CHIEVEMENTS/<span style="font-size: 37px;">A</span>CTIVTY/<span style="font-size: 37px;">A</span>WARDS</h3><hr>
+                    <h6>- ${achivements1}</h6>
+                    <h6>- ${achivements2}</h6>
+                    <h6>- ${achivements3}</h6>
+                    <h6>- ${achivements4}</h6>
+    
+                </div>
+            </div>
+        </div>
+    
+         <!-- <script>
+            let interval=setTimeout(()=>{
+                window.print();
+            },2000);
+        </script>  -->
+    </body>
+    </html>
